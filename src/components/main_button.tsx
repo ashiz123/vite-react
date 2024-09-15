@@ -5,15 +5,16 @@ import React from 'react'
 // if nothing type specified , keep it react node
 
 interface myProps {
-    children ?: React.ReactNode
-    // name : string;
+    forClick?: () => void; 
+    children ?: React.ReactNode;
+    
 }
 
 
 
-const MainButton : React.FC<myProps> = ({children}) => {
+const MainButton : React.FC<myProps> = ({children, forClick}) => {
     return (
-        <button>{children}</button>
+        <button onClick={forClick}>{children}</button>
     )
 }
 
